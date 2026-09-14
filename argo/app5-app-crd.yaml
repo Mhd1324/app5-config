@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app5-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Mhd/app5-config.git
+    targetRevision: HEAD
+    path: app5-helm
+    helm:
+      releaseName: app5
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app5-ns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
