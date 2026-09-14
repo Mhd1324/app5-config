@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Mhd/app5-config.git
+    repoURL: https://github.com/Mhd1324/app5-config.git
     targetRevision: HEAD
     path: app5-helm
     helm:
